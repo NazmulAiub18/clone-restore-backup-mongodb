@@ -1,0 +1,37 @@
+{
+  "name": "clone-restore-backup-mongodb",
+  "version": "1.0.0",
+  "description": "A project to clone/restore/backup your mongodb!",
+  "keywords": [
+    "clone mongodb",
+    "restore mongodb",
+    "backup mongodb"
+  ],
+  "author": "Nazmul Islam",
+  "license": "MIT",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "format": "run-script-os",
+    "format:win32": "prettier --config .prettierrc \"./src/**/*.ts\" --write",
+    "format:darwin:linux": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "format:default": "prettier --config .prettierrc 'src/**/*.ts' --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "run-script-os": "^1.1.6",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "mongodb": "^5.0.1"
+  }
+}

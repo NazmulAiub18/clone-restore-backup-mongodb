@@ -42,11 +42,11 @@ async function clone(from, to) {
 
 clone(
   {
-    uri: "mongodb+srv://spekterbangla:bPbpqQtXGUh8sQc1@cluster0.ujhky.mongodb.net/?retryWrites=true&w=majority",
+    uri: "mongodb+srv://spekterbangla:*********@cluster0.ujhky.mongodb.net/?retryWrites=true&w=majority",
     db: "atlashub-prod-clone",
   },
   {
-    uri: "mongodb+srv://dev:12345@testcluster.qhiapda.mongodb.net/?retryWrites=true&w=majority",
+    uri: "mongodb+srv://dev:*****@testcluster.qhiapda.mongodb.net/?retryWrites=true&w=majority",
     db: "atlashub-dev",
   },
 ).catch(console.error);
